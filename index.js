@@ -1,16 +1,25 @@
-require('dotenv').config();
-const express = require('express');
-const axios = require('axios');
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = require("path");
+const { exec } = require("child_process");
+
 const app = express();
+const PORT = 3000;
 
-const port = process.env.PORT || 3000;
+app.use(bodyParser.json());
+app.use(cors());
 
-app.use(express.json());
+const routes = require("./routes/routes");
+app.use(routes);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.use(express.static(path.join(__dirname, "..", "frontend")));
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "..", "frontend", "index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`)
-})
+const server = app.listen(PORT, function () {
+  console.log(`Server running at http://127.0.0.1:${PORT}/`);
+  exec(`open http://127.0.0.1:${PORT}/`);
+});
