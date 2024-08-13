@@ -1,4 +1,4 @@
-// const { callGPT } = require("../services/openaiService");
+const { callGPT } = require("../services/openaiService");
 
 const system = `You are an AI assistant specializing in dietary modifications and recipe adaptations. Your task is to help users convert traditional recipes into great tasting vegan versions. When converting a recipe to vegan, please follow these guidelines:
 
