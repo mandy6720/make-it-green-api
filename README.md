@@ -1,8 +1,8 @@
 # ⚠️ UNDER CONSTRUCTION ⚠️
 
-# Make It Green API
+# Make It Green
 
-This is the API for Make it Green - an AI app that takes in repices and turns them vegan 🌱
+This Make it Green - an AI app that takes in repices and turns them vegan 🌱
 
 The idea for this project came about when I decided to start trying to eat more plant-based meals for health, environment and wallet reasons! The problem i kept running into is that, as a total foodie, Ikept getting these fabulous recipes in my inbox that were decidedly not part of the plant-based diet I was going for.
 
@@ -12,7 +12,8 @@ Rather than making all the substitutions mentally, I figured "why not use AI to 
 
 This app uses Node and Express on the backend and React on the frontend. Backend and frontend are in their own separate folders.
 
-To install, from root, 
+First of all, you'll need to clone the repo:
+```git clone https://github.com/mandy6720/make-it-green.git```
 <!--
 
 Illustrations: A picture is worth 1000 words, right? Got a video of your project or a GIF of it working? Perhaps a link to a live demo? Is your application something you can show? Don't be too quick to say "No" here. Terminal applications are ok, and the app doesn't have to be pretty or even interactive.
